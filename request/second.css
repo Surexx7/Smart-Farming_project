@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/**navbar**/
+body {
+  background: #222;
+}
+/** hero section **/
+.hero-top {
+  background-color: wheat;
+  display: flex;
+  justify-content: center;
+  color: green;
+  align-items: center;
+}
+
+i {
+  margin: 0px 40px;
+  font-size: 20px;
+  color: brown;
+}
+.hero-req {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 165px 0 165px;
+  flex-wrap: wrap;
+}
+
+.req1 {
+  border: black solid 2px;
+  height: 300px;
+  width: 30%;
+}
+.req1 img {
+  height: 260px;
+  width: 356px;
+}
+
+.req2 {
+  border: black solid 2px;
+  height: 300px;
+  width: 30%;
+  margin-top: 20px;
+}
+.req2 img {
+  height: 260px;
+  width: 356px;
+}
+.glass {
+  background: linear-gradient(green, yellow, brown, wheat);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 5px;
+}
+.image-container {
+  position: relative;
+  overflow: hidden;
+  width: 300px; /* Adjust this width as needed */
+  height: 200px; /* Adjust this height as needed */
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 30px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.cloud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: white; /* Adjust the color to match your cloud shape */
+  clip-path: polygon(
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 50%,
+    50% 0
+  ); /* Creates a cloud shape */
+  opacity: 0.8; /* Adjust the opacity as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cloud a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+.cloud a:hover {
+  color: orangered;
+}
+
+.image-container1 {
+  position: relative;
+  overflow: hidden;
+  width: 300px; /* Adjust this width as needed */
+  height: 200px; /* Adjust this height as needed */
+  margin-top: 20px;
+  align-items: center;
+}
+
+.hero-req {
+  margin-top: 50px;
+}

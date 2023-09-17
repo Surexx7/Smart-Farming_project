@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+<title>Mapping Deforestation</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+            <ul>
+                <li id="toRealTime"><a>Deforestation In Real Time</a></li>
+                <li id="toCountry"><a>Deforestation By Globally</a></li>
+            </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="showcase">
+            <div class="container">
+                <h1>Tracking Deforestation Of Nepal </h1>
+                <p>Interactive maps to </br>
+                track deforestation</p>
+            </div>
+        </br>
+        </section>
+    <section id="text">
+      <h1>Background</h1>
+      <svg version="1.1" id="line_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60%" height="20px" xml:space="preserve">
+        <path class="path2" fill="#01a09e" stroke-width="5" stroke="#FF851B" d="M0 0 l1120 0"/>
+      </svg>
+<p>GAIN In Nepal, the top 2 regions were responsible for 50% of all tree cover gain between 2000 and 2020. Central had the most tree cover gain at 49.5 kha compared to an average of 34.8 kha.
+      </p>
+      <p>From 2002 to 2022, Nepal lost 4.36 kha of humid primary forest, making up 8.4% of its total tree cover loss in the same time period. Total area of humid primary forest in Nepal decreased by 0.60% in this time period.</p>
+
+      <p>Explore interactive charts and maps that summarize rates of forest change in Nepal. Statistics – including rankings of regions with the most forest loss and gain – can be customized, easily shared and downloaded for offline use.</p>
+      <h1>How to use and interpret map</h1>
+      <svg version="1.1" id="line_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60%" height="20px" xml:space="preserve">
+        <path class="path2" fill="#01a09e" stroke-width="5" stroke="#e1c627" d="M0 0 l1120 0"/>
+      </svg>
+      <p>This interactive map tracks in almost real time the global deforestation rate since 1990. To calculate the deforestation rate I used World Bank deforestation data from 1990 and 2015 and divided it by the number of seconds in the period. To interactively visualize how much forest has been lost until today it is assumed that the deforestation rate between 1990 and 2015 did not change in 2016 and 2017.</p>
+      <p>To visualize how much forest has been lost since a specific date choose the date in the date box and click "Select". A circle with an area equivalent to how much forest has been lost since will appear in your current location. You can compare the area of the circle to any country, state or area by clicking on the circle and dragging it to your location of interest. To change the start date click the "Reset" button, select a new date and click "Select".</p>
+    </section>
+    <section id="datetime">
+      <div class="container" id="container1">
+         <form onsubmit="calculateRadius(); return false;">
+          <p><span id="dateTxt">Select a date after January, 1 1990: </span>
+            <span id="dateForm">
+            <input type="date" id="date" value="" min="1990-01-01">
+            <button id="btn" type="submit" >Select</button>
+            <button id="resetBtn" type="reset">Reset</button>
+            </span>
+          </p>
+        </form>
+       
+        </br>
+
+        <div class="kmLostDiv">
+        <p id="kmLostPrgrh">Square kilometers lost since the choosen date:</p> <p id="kmLost"></p>
+        </div>
+      
+        </br>
+      </div>
+    </section>
+    <div id="map"></div>
+    <section id="text">
+      <h1>Visualize forest change by Globally</h1>
+      <svg version="1.1" id="line_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60%" height="20px" xml:space="preserve">
+        <path class="path2" fill="#01a09e" stroke-width="5" stroke="#FF851B" d="M0 0 l1120 0"/>
+      </svg>
+      <p>This map shows how much square kilometers of forest countries gained or lost between 1990 and 2015. Countries with an orange circle gained forest area equivalent to the size of the circle while countries with a red circle lost forest area equivalent to the size of the circle. Circle can be dragged to other parts of the world to compare forest lost or gain with other countries. There is no data available for some countries and the majority of overseas territories or colonies, thus, they do not have a circle.</p>
+    </section>
+    <section id="datetime">
+      <div class="container" id="container2">
+         <form onsubmit="return false;">
+          <p><span id="dateTxt">Select a country: </span>
+            <span id="dateForm">
+            <input type="text" id="address" value="" placeholder="Select a country...">
+            <button id="btn2" value="Encode" type="submit" >Search</button>
+            </span>
+          </p>
+        </form>
+         </div>
+         </br>
+    </section>
+    <div id="map2"></div>
+   
+    <script src="script.js"></script>
+        <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgH6sNMG9aGIuA0UgFeudue3i0TOCRMo4&callback=initMap">
+    </script>
+  </body>
+</html>
